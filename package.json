@@ -1,0 +1,29 @@
+{
+  "name": "prisma-orm-hello-world",
+  "version": "1.0.0",
+  "description": "Prisma ORM - Hello World Example",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "postinstall": "npm run prisma-db-push && npm run seed",
+    "seed": "node prisma/seed.js",
+    "start": "nodemon src/index.js",
+    "prisma-studio": "prisma studio",
+    "prisma-format": "prisma format",
+    "prisma-generate": "prisma generate",
+    "prisma-migrate": "prisma migrate dev",
+    "prisma-db-pull": "prisma db pull",
+    "prisma-db-push": "prisma db push"
+  },
+  "keywords": ["prisma", "orm", "hello-world", "sqlite"],
+  "author": "Bojan Zivkovic",
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/client": "^4.9.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.3",
+    "prisma": "^4.9.0"
+  }
+}
